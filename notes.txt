@@ -17,3 +17,10 @@ link register = stores the location of the location that a function should retur
 pc = program counter, keep track of the next instrucion to execute
 
 cpsr = has flags that tell special information about operations(eg: a sum returned pos or neg)
+.global _start
+_start:
+	LDR R0,=list
+	LDR R1,[R0]
+	LDR R2,[R0,#4]
+	MOV R0,#15
+
